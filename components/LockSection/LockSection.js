@@ -3,7 +3,7 @@ import Tag from "../Tag/Tag";
 import iconLock1 from "../../assets/fonts/lock1.svg";
 import iconLock2 from "../../assets/fonts/lock2.svg";
 
-import "./style.scss";
+// import "./style.scss";
 
 const LockSection = (props) => {
   const { context, card, popover = false } = props;
@@ -165,7 +165,7 @@ const LockSection = (props) => {
               {!context.user && (
                 <div>
                   <div>Requires level experience: ${card.locked_by_xp}</div>
-                  <div>Sign up / Log In to start leveling! ==> CTA LOGIN</div>
+                  <div>Sign up / Log In to start leveling! == CTA LOGIN</div>
                 </div>
               )}
             </div>

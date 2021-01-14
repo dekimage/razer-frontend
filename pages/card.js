@@ -102,10 +102,7 @@ class CardView extends React.Component {
                 <div className="backgroundBlackScreen">
                   <div className="cardImage">
                     {card.image && (
-                      <img
-                        className="cardImage--img"
-                        src={`http://localhost:1337${card.image.url}`}
-                      />
+                      <img className="cardImage--img" src={card.image.url} />
                     )}
                   </div>
                 </div>

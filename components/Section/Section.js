@@ -1,5 +1,5 @@
 import React from "react";
-import "./style.scss";
+// import "./style.scss";
 
 const Section = (props) => {
   const name = props.name;

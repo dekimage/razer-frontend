@@ -34,8 +34,8 @@ class Spell extends React.Component {
             {isOpen ? (
               <ion-icon name="chevron-up-outline"></ion-icon>
             ) : (
-                <ion-icon name="chevron-down-outline"></ion-icon>
-              )}
+              <ion-icon name="chevron-down-outline"></ion-icon>
+            )}
           </div>
         </div>
         {isOpen && (
@@ -54,15 +54,15 @@ class Spell extends React.Component {
                     Forget Spell
                   </div>
                 ) : (
-                    <div
-                      className="spellBody-btn learn"
-                      onClick={() =>
-                        context.onSaveFavorBuild(spell, true, "spells")
-                      }
-                    >
-                      + Learn Spell
-                    </div>
-                  )}
+                  <div
+                    className="spellBody-btn learn"
+                    onClick={() =>
+                      context.onSaveFavorBuild(spell, true, "spells")
+                    }
+                  >
+                    + Learn Spell
+                  </div>
+                )}
               </div>
             )}
           </div>

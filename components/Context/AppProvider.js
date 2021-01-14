@@ -10,7 +10,10 @@ import { toast } from "react-toastify";
 import { UPDATE_USER } from "../../GQL/Mutation";
 import { GET_USER, GET_REALMS_CARDS_COUNTER } from "../../GQL/Query";
 
-const apiUrl = process.env.API_URL || "http://localhost:1337";
+const apiUrl =
+  process.env.API_URL ||
+  "https://titan-backend-3-5-0.herokuapp.com" ||
+  "http://localhost:1337";
 const strapi = new Strapi(apiUrl);
 const AppContext = React.createContext();
 

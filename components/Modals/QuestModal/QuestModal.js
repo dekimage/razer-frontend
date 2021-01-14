@@ -1,7 +1,7 @@
 // import Dust from "../../Inventory/Dust/Dust";
 import Link from "next/link";
 import iconXp from "../../../assets/fonts/xp.svg";
-import "./style.scss";
+// import "./style.scss";
 const QuestModal = ({ card, context }) => {
   return (
     <>

@@ -1,6 +1,9 @@
 import React from "react";
 import Strapi from "strapi-sdk-javascript/build/main";
-const apiUrl = process.env.API_URL || "http://localhost:1337";
+const apiUrl =
+  process.env.API_URL ||
+  "https://titan-backend-3-5-0.herokuapp.com" ||
+  "http://localhost:1337";
 const strapi = new Strapi(apiUrl);
 import { withContext } from "../Context/AppProvider";
 import Link from "next/link";
