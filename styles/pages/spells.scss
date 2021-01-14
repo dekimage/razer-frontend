@@ -1,0 +1,83 @@
+@import "../variables.scss";
+
+.spellsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1% 5%;
+}
+.pageSpellsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1% 5%;
+}
+.cardSpellsContainer {
+  border: 1px solid $optimzeColor;
+  box-shadow: $optimzeShadow;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  margin: 0.5rem;
+}
+
+.smallCard {
+  max-width: 20rem;
+  // max-width: 35.5rem;
+  border: 1px solid $optimzeColor;
+  box-shadow: $optimzeShadow;
+  // padding: 0.3rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  &--counter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.7rem;
+    font-weight: 500;
+  }
+  &--name {
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding-left: 0.3rem;
+    padding-right: 0.4rem;
+  }
+
+  img {
+    padding: 0.3rem;
+    width: 3rem;
+    height: 3rem;
+  }
+}
+
+// .description {
+//   padding-left: 1rem;
+//   padding-bottom: 0.3rem;
+//   font-size: 0.9rem;
+// }
+
+.cardLink-btn {
+  border-left: 1px solid $optimzeColor;
+  padding: 0.5rem;
+  margin-left: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:hover {
+    background-color: $optimzeColor;
+  }
+  cursor: pointer;
+  img {
+    padding: 0;
+  }
+}
+
+.spellContainer {
+  width: 100%;
+  padding-left: 0.5rem;
+}
+
+@media (max-width: 760px) {
+  .pageSpellsContainer {
+    justify-content: center;
+  }
+}

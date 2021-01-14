@@ -1,0 +1,41 @@
+@import "../../styles/variables.scss";
+@import "../../styles/components.scss";
+
+.section-signin {
+  display: flex;
+  justify-content: center;
+}
+
+.signin-box {
+  padding: 1rem;
+  margin: 1rem;
+  border: 1px solid $optimzeColor;
+  box-shadow: $optimzeShadow;
+  border-radius: 5px;
+  width: 480px;
+}
+
+.email-box {
+  margin-bottom: 1rem;
+}
+
+.password-box {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.label-or {
+  border-top: 1px solid $optimzeColor;
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-align: center;
+  padding-top: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 0.7rem;
+}
+
+.forgot-password {
+  display: flex;
+  justify-content: center;
+  padding-top: 1rem;
+}

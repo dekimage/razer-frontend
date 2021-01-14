@@ -1,0 +1,173 @@
+@import "./variables.scss";
+//Reactstrap
+
+.section-breadcrumb {
+  display: flex;
+  justify-content: center;
+  left: auto;
+  right: auto;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.breadcrumb {
+  font-size: 16px;
+  font-weight: 500;
+  background-color: white;
+  margin: 0;
+  width: auto;
+  padding: 0.2rem;
+  ol {
+    padding: 0;
+    background-color: white;
+    // border: 1px solid rgb(226, 229, 236);
+    // box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  }
+  a {
+    color: $blue;
+  }
+}
+
+.dropdown {
+  button {
+    background-color: white;
+    color: black;
+    border: 1px solid rgb(226, 229, 236);
+  }
+  .dropdown-item {
+    border: none;
+  }
+}
+
+//Tooltips
+.toolTip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.toolTip .tooltiptext {
+  font-size: 0.8rem;
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.toolTip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.toolTip .tooltiptext::after {
+  content: " ";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+.toolTip .tooltiptext {
+  top: -40px;
+  right: -105%;
+}
+
+// Popovers
+.card-popover-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  &-name {
+    font-size: 18px;
+  }
+}
+.card-popover-body {
+  display: flex;
+  flex-direction: row;
+}
+.card-popover-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  border-right: 1px solid $lingleeGray;
+}
+.card-popover-stats {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  font-size: 12px;
+  &-rarity {
+  }
+  &-realm {
+    display: flex;
+    flex-direction: row;
+  }
+  &-expansion {
+  }
+}
+
+.card-popover-cta {
+  display: flex;
+  justify-content: center;
+  padding-top: 0.5rem;
+  border-top: 1px solid $lingleeGray;
+  width: 100%;
+}
+
+.card-popover-btn {
+  position: relative;
+  border-radius: 7px;
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+  font-weight: 600;
+  padding: 0 0.5rem;
+  background-color: $lingleeGray;
+  border: 1px solid $optimzeColor;
+  &:hover {
+    background-color: $gray_light;
+  }
+  // &:active {
+  //   background-color: $lingleeGray;
+  // }
+  &:focus {
+    background-color: $gray_light;
+    border: 1px solid $gray_lighter;
+    outline: none;
+  }
+  &-name {
+    display: flex;
+    align-items: flex-end;
+    margin-top: 4px;
+  }
+  &-monkey {
+    display: flex;
+    align-items: center;
+    width: 24px;
+    height: 30px;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+//Modals
+.modal-title {
+  font-weight: 600;
+}

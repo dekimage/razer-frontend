@@ -1,0 +1,98 @@
+@import "../variables.scss";
+.quests {
+  padding: 1% 2%;
+}
+.questsWrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.questsContainer {
+  display: flex;
+  flex-direction: column;
+  width: 32rem;
+}
+
+.quest {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid $optimzeColor;
+  box-shadow: $optimzeShadow;
+  border-radius: 4px;
+  margin: 0.3rem;
+  max-width: 40rem;
+  cursor: pointer;
+
+  &--trigger {
+    max-width: 40rem;
+  }
+  &--name {
+    font-size: 1rem;
+    font-weight: 500;
+    font-style: italic;
+    padding: 0.5rem;
+    font-family: "Kanit";
+  }
+
+  &--number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid $optimzeColor;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    width: 2.75rem;
+  }
+
+  &--mark {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    width: 3rem;
+    color: white;
+    font-size: 2rem;
+    font-weight: 600;
+    &.complete {
+      background-color: $normalGreen;
+    }
+    &.active {
+      background-color: $eggHeadOrangeLight;
+    }
+  }
+
+  &--card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.2rem 0.5rem;
+    font-size: 0.7rem;
+  }
+
+  &--status {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0.5rem;
+    font-size: 0.7rem;
+  }
+  &--cardLink {
+    display: inline-block;
+    border-radius: 4px;
+    border: 1px solid $optimzeColor;
+    box-shadow: $optimzeShadow;
+    padding: 0 0.4rem;
+    margin-right: 0.4rem;
+    color: $tw_grey_light;
+    background-color: $tw_dark;
+    font-weight: 500;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 1200px) {
+  .questsWrapper {
+    justify-content: center;
+  }
+}

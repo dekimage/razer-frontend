@@ -1,0 +1,31 @@
+@import "../variables.scss";
+@import "../components.scss";
+.page-rewards-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.section-rewards-header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+  padding: 3rem 1.5rem;
+  background-color: $gray_medium;
+}
+
+.section-milestones {
+  width: 1080px;
+  display: flex;
+  justify-content: center;
+  padding-top: 1rem;
+}
+
+@media (max-width: 1080px) {
+  .section-milestones {
+    width: 100%;
+  }
+}

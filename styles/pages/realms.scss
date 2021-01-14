@@ -1,0 +1,34 @@
+@import "../variables.scss";
+@import "../components.scss";
+
+.section-realms {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 2rem;
+}
+.realms-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1200px;
+}
+
+.section-realms-header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+  padding: 3rem 1.5rem;
+  background-color: $gray_medium;
+}
+
+@media (max-width: 480px) {
+  .section-realms-header {
+    padding: 1.5rem 1rem;
+  }
+  .section-realms {
+    padding-top: 0.5rem;
+  }
+}

@@ -1,0 +1,14 @@
+@import "../../styles/variables.scss";
+.progressbarEmpty {
+  margin-top: 0.2rem;
+  background-color: $optimzeColor;
+  position: relative;
+  height: 0.25rem;
+}
+.progressBarFilled {
+  content: "";
+  height: 0.25rem;
+  background-color: $blue;
+  position: absolute;
+  width: calc(var(--progress, 0) * 1%);
+}

@@ -1,0 +1,46 @@
+@import "../../styles/variables.scss";
+.secondary-header-container {
+  display: flex;
+  justify-content: center;
+  padding: 0 1rem;
+  border-bottom: 1px solid $optimzeColor;
+  box-shadow: $optimzeShadow;
+}
+
+.secondary-header {
+  width: 1080px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    margin: 0 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-bottom: 3px solid transparent;
+    color: #888;
+    cursor: pointer;
+    &:hover {
+      color: black;
+      border-bottom: 3px solid black;
+    }
+    &.active {
+      color: black;
+      border-bottom: 3px solid black;
+    }
+    @media not all and (min-width: 620px) {
+      font-size: 0.7rem;
+      margin: 0;
+      padding: 1rem 0.5rem;
+    }
+  }
+  @media not all and (min-width: 620px) {
+    padding: 0;
+    justify-content: center;
+  }
+}

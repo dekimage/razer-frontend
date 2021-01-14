@@ -1,0 +1,147 @@
+@import "variables.scss";
+
+// Wrappers
+
+.inner-wrapper {
+  width: 1080px;
+  @media (max-width: 1080px) {
+    width: auto;
+  }
+}
+.outer-wrapper {
+  display: flex;
+  justify-content: center;
+  @media (max-width: 1080px) {
+    justify-content: flex-start;
+  }
+  @media (max-width: 480px) {
+    justify-content: center;
+  }
+}
+// Fonts & Styles
+.section-header {
+  font-size: 36px;
+  line-height: 54px;
+  font-weight: 700;
+  max-width: 920px;
+}
+.section-subHeader {
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 500;
+  max-width: 920px;
+  color: #a5a5a5;
+}
+
+.text-header {
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 600;
+}
+.text-subHeader {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 500;
+}
+.text-content {
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 400;
+}
+.text-small {
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+//fixes maybe - used for searching
+.text-medium-header {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 600;
+}
+
+@media (max-width: 480px) {
+  .section-header {
+    font-size: 32px;
+    line-height: 38px;
+  }
+  .section-subHeader {
+    font-size: 16px;
+    line-height: 28px;
+  }
+  .text-header {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 700;
+  }
+  .text-subHeader {
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 500;
+  }
+  .text-content {
+    font-size: 14px;
+    line-height: 26px;
+    font-weight: 400;
+  }
+}
+
+// BUTTONS
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border-radius: 5px;
+  cursor: pointer;
+  height: 48px;
+
+  @media (max-width: 480px) {
+    font-size: 12px;
+  }
+  &.button-full {
+    width: 100%;
+  }
+  &.button-primary {
+    box-shadow: 0px 6px 7px -4px #999999;
+    color: white;
+    // background-color: #5953fc;
+    background-color: black;
+    border: 1px solid transparent;
+    a {
+      text-decoration: none;
+      color: white;
+    }
+    &:hover {
+      // background-color: #5953fc;
+      background-color: black;
+    }
+    &:active {
+      position: relative;
+      top: 1px;
+    }
+  }
+  &.button-secondary {
+    // color: #5953fc;
+    color: black;
+    border: 1px solid black;
+    // border: 1px solid #5953fc;
+    background-color: white;
+    a {
+      text-decoration: none;
+    }
+    &:hover {
+      // border: 1px solid #5953fc;
+      background-color: white;
+    }
+    &:active {
+      position: relative;
+      top: 1px;
+    }
+  }
+}

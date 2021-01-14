@@ -1,0 +1,429 @@
+@import "../../styles/variables.scss";
+
+// New Header
+
+.newDesktopHeader {
+  box-shadow: $optimzeShadow;
+  z-index: 10000;
+  position: fixed;
+  left: 0;
+  background-color: white;
+  height: 100vh;
+  width: 225px;
+  border-right: 1px solid $optimzeColor;
+  display: flex;
+  flex-direction: column;
+  &-logo {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 0.5rem;
+  }
+  &-item {
+    display: flex;
+    align-items: center;
+    padding: 0.8rem 1rem;
+    padding-left: 2rem;
+    font-weight: 500;
+    font-size: 18px;
+    color: $tw_grey_light;
+    border-left: 4px solid transparent;
+    cursor: pointer;
+    &.active {
+      color: black;
+      // color: $blue;
+      font-weight: 600;
+      border-left: 4px solid $blue;
+    }
+  }
+}
+
+.currencies {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.currencies-explainer {
+  z-index: 1000;
+  background-color: white;
+  box-shadow: $optimzeShadow;
+  border: 1px solid $optimzeColor;
+
+  position: absolute;
+  height: 4rem;
+  bottom: -4rem;
+  width: 100%;
+  visibility: hidden;
+  opacity: 1;
+  // transition: visibility 1s, opacity 0.5s ease-in-out;
+  &.active {
+    visibility: visible;
+    .currencies-explainer {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}
+
+.currenciesBox {
+  outline: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  margin: 0 1rem;
+  &-icon {
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0.2rem;
+    // border: 1px solid black;
+  }
+
+  &-amount {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 600;
+    // border: 1px solid black;
+  }
+}
+
+.desktop-header {
+  // position: fixed;
+  display: flex;
+  flex-direction: row;
+  height: 4rem;
+  border-bottom: 1px solid $optimzeColor;
+  box-shadow: $optimzeShadow;
+
+  a {
+    color: black;
+    text-decoration: none;
+  }
+
+  &--grow {
+    display: flex;
+    flex-grow: 1;
+  }
+
+  &--search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 4.5rem;
+  }
+
+  &--profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    margin-right: 1rem;
+    &.active {
+      .dropdownBar {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+    &__loginButton {
+      width: 6rem;
+      margin: 0 0.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      border: 1px solid transparent;
+      border-radius: 4px;
+      padding: 0.5rem;
+      font-weight: 600;
+      background-color: $tw_grey;
+      cursor: pointer;
+      &:hover {
+        transition: color 0.3s ease;
+        background-color: $tw_dark;
+        color: white;
+      }
+    }
+    &__signUpButton {
+      width: 6rem;
+      margin: 0 0.5rem;
+      margin-left: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      border: 1px solid transparent;
+      border-radius: 4px;
+      padding: 0.5rem;
+      font-weight: 600;
+      background-color: $eggHeadOrange;
+      cursor: pointer;
+      &:hover {
+        transition: color 0.3s ease;
+        background-color: $eggHeadOrange2;
+        color: white;
+      }
+    }
+  }
+
+  &--text {
+    color: black;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    padding: 0.5rem;
+    font-weight: 600;
+    cursor: pointer;
+
+    &:hover {
+      transition: color 0.3s ease;
+      background-color: $tw_grey;
+      color: $blue;
+    }
+  }
+
+  &--item {
+    position: relative;
+    padding: 0 0.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+
+    &:hover {
+      transition: border-bottom 0.4s ease;
+    }
+  }
+}
+
+.dropdownBar {
+  visibility: hidden;
+  opacity: 1;
+  top: 3rem;
+  right: 0.5rem;
+  position: absolute;
+  background-color: $tw_dark;
+  border-radius: 3px;
+  padding: 0.5rem;
+  width: auto;
+  width: 10rem;
+  box-shadow: 0px 4px 10px 1px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  transition: visibility 0s, opacity 0.2s linear;
+
+  &--separator {
+    color: $tw_grey_light;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+  }
+
+  &--link {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    padding: 0.35rem;
+    font-size: 0.8rem;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 500;
+    border-radius: 4px;
+    &__icon {
+      padding-right: 0.3rem;
+    }
+
+    &:hover {
+      transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out;
+      background-color: $tw_grey;
+      color: white;
+    }
+  }
+}
+
+// MOBILE HEADER
+
+.divider-label {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  color: $tw_grey_light;
+  padding-top: 0.5rem;
+}
+
+.mobile-header {
+  background-color: black;
+  width: 100%;
+  height: 4rem;
+  display: flex;
+  flex-direction: row;
+  z-index: 1000;
+}
+
+.open-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  cursor: pointer;
+  background-color: $gray_dribble;
+  border-radius: 15px;
+}
+
+.openMobile-header {
+  border-top: 2px solid #333;
+  margin-top: 4rem;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: black;
+
+  &-box {
+    display: flex;
+    flex-direction: column;
+    padding: 0 1.5rem;
+    padding-bottom: 1rem;
+    height: 100%;
+  }
+
+  &-isLogged-box {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin-bottom: 3rem;
+  }
+
+  &-item {
+    // text-transform: uppercase;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: $optimzeColor;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    cursor: pointer;
+    &:hover {
+      background-color: #444;
+    }
+  }
+
+  &-loginSignupBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 20%;
+    flex-grow: 1;
+  }
+
+  &-loginButton {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 500;
+    width: 90%;
+    padding: 1rem;
+    border: 2px solid $optimzeColor;
+    border-radius: 5px;
+    color: $optimzeColor;
+    cursor: pointer;
+  }
+
+  &-signUpButton {
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 500;
+    width: 90%;
+    padding: 1rem;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    color: black;
+    background-color: $eggHeadOrange;
+    cursor: pointer;
+  }
+}
+
+//BOTTOM MENU MOBILE
+
+.mobile-header-bottom-menu {
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  bottom: 1%;
+  left: 0;
+  width: 100%;
+  height: 3rem;
+  z-index: 500;
+}
+
+.bottom-header-item {
+  &.active {
+    background-color: $optimzeColor;
+  }
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  // justify-content: center;
+  align-items: center;
+  height: 3.5rem;
+  width: 100%;
+  min-width: 3.5rem;
+  max-width: 15rem;
+  border: 1px solid $optimzeColor;
+  border-left: none;
+  border-bottom: none;
+  &:last-child {
+    border-right: none;
+  }
+
+  &--icon {
+    padding-top: 0.5rem;
+    img {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &--label {
+    // padding-bottom: 12px;
+    height: 12px;
+    font-size: 0.7rem;
+  }
+}
+
+// MEDIA SIZES
+.desktop-header {
+  @media (max-width: 800px) {
+    display: none;
+  }
+
+  @media (max-width: 800px) {
+    &--search {
+      margin-left: 0;
+    }
+  }
+}
+.mobile-header-bottom-menu {
+  @media not all and (max-width: 480px) {
+    display: none;
+  }
+}
+.mobile-header {
+  @media not all and (max-width: 800px) {
+    display: none;
+  }
+}

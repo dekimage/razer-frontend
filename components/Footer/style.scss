@@ -1,0 +1,41 @@
+@import "../../styles/variables.scss";
+.footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+  border-top: 2px solid $optimzeColor;
+  height: 5rem;
+  padding: 1rem;
+  margin-top: 2rem;
+  background-color: $tw_dark;
+  background-color: black;
+
+  &-link {
+    display: inline-block;
+    color: white;
+    padding: 0.3rem;
+    border-radius: 4px;
+    width: auto;
+    font-size: 0.8rem;
+    cursor: pointer;
+    margin: 0 1rem;
+    &:hover {
+      color: $optimzeColor;
+    }
+  }
+
+  &-corporate {
+    color: $tw_grey;
+    font-size: 0.8rem;
+  }
+
+  @media not all and (min-width: 1200px) {
+    flex-direction: column;
+    margin-bottom: 3.5rem;
+    height: 15rem;
+  }
+}

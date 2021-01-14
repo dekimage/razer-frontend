@@ -1,0 +1,48 @@
+@import "../../styles/variables.scss";
+@import "../../styles/components.scss";
+
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $gray_medium;
+  height: 10rem;
+
+  &-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+
+  &-image {
+    padding: 0.5rem;
+    height: 130px;
+    // width: 130px;
+  }
+
+  @media (max-width: 1080px) {
+    justify-content: flex-start;
+  }
+
+  @media (max-width: 620px) {
+    justify-content: center;
+    align-items: center;
+  }
+
+  @media (max-width: 480px) {
+    &-wrapper {
+      flex-direction: column;
+      align-items: center;
+    }
+    &-image {
+      height: 75px;
+      padding: 0;
+    }
+    &-textBox {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}

@@ -1,0 +1,74 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/components.scss";
+.questModal {
+  padding: 1rem;
+  padding-top: 0;
+  &--title {
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding-bottom: 1rem;
+  }
+  &--cardLink {
+    font-size: 0.8rem;
+    padding: 0.5rem;
+    padding-left: 0;
+  }
+
+  &--label {
+    display: flex;
+    justify-content: center;
+    font-weight: 500;
+  }
+  &--story {
+    padding-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-bottom: 1px solid $optimzeColor;
+    border-radius: 4px;
+    box-shadow: $optimzeShadow;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    &__content {
+      font-size: 0.7rem;
+    }
+  }
+  &--rewards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    &__xp {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid $optimzeColor;
+      border-radius: 4px;
+      width: 5rem;
+      height: 3.5rem;
+      margin-left: 0.5rem;
+      font-size: 0.8rem;
+    }
+    &__dust {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid $optimzeColor;
+      border-radius: 4px;
+      width: 6rem;
+      height: 3.5rem;
+      margin-left: 0.5rem;
+      &-quantity {
+        display: flex;
+        justify-content: center;
+        padding: 0.5rem;
+      }
+    }
+  }
+  &--buttonBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+}

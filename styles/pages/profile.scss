@@ -1,0 +1,328 @@
+@import "../variables.scss";
+@import "../components.scss";
+
+//NEW MODAL!!!
+.newModal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+.section-dashboard {
+  display: flex;
+  justify-content: center;
+}
+
+.dashboard-wrapper {
+  width: 1080px;
+}
+
+.viewMore {
+  display: flex;
+  align-items: center;
+  color: $blue;
+  font-weight: 600;
+  font-size: 14px;
+}
+.section-welcome {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.welcome-box {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 260px;
+  width: 100%;
+  margin-left: 1rem;
+  border: 1px solid $optimzeColor;
+  border-radius: 15px;
+}
+
+// <====== SECTION PROFILE ======>
+
+.profile {
+  background-color: white;
+  margin: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: $fasticShadow;
+  border-radius: 15px;
+  padding: 1rem;
+  height: 260px;
+
+  &-link {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &-avatar {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 1px solid $optimzeColor;
+    box-shadow: $optimzeShadow;
+    width: 7.5rem;
+    height: 7.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  &-xpBar {
+    margin-top: 0.5rem;
+    background-color: $lingleeGray;
+    position: relative;
+    height: 0.35rem;
+    width: 15rem;
+  }
+
+  &-xpBar--filled {
+    content: "";
+    height: 0.35rem;
+    // background-image: linear-gradient(to right, #a2db96, #24cca9);
+    background-image: linear-gradient(
+      to right,
+      $eggHeadOrangeLight,
+      $eggHeadOrange2
+    );
+    position: absolute;
+    width: calc(var(--progress, 0) * 1%);
+  }
+}
+
+// <====== SECTION STATS ======>
+.section-stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 3rem;
+  margin-top: 1rem;
+}
+
+.stat {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: $fasticShadow;
+  padding: 1rem;
+  margin: 0.5rem;
+  border-radius: 15px;
+  &-name {
+    font-size: 20px;
+    font-weight: 500;
+  }
+  &-value {
+    margin-left: 0.5rem;
+    font-size: 32px;
+  }
+}
+
+// <====== SECTION CARDS ======>
+.recentCards-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 3rem;
+  margin-top: 1rem;
+}
+.recentCard {
+  display: flex;
+  cursor: pointer;
+  flex-direction: column;
+  box-shadow: $fasticShadow;
+  border-radius: 15px;
+
+  padding: 1rem;
+  margin: 0 0.5rem;
+  &:hover {
+    .recentCard-name {
+      color: $blue;
+    }
+    .recentCard-image {
+      img {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  &-image {
+    img {
+      transition: transform 0.5s;
+    }
+  }
+
+  &-name {
+    display: flex;
+    flex-direction: row;
+    font-weight: 600;
+    margin-left: 0.3rem;
+    margin-bottom: 0.5rem;
+  }
+
+  &-time {
+    font-size: 14px;
+    font-weight: 500;
+    color: $tw_grey_light;
+  }
+}
+
+// <====== SECTION CARDS ======>
+
+.buddies-list {
+  margin-bottom: 3rem;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.buddy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  margin: 0 1rem;
+  box-shadow: $fasticShadow;
+  border-radius: 15px;
+  min-width: 15%;
+
+  &-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: $fasticShadow;
+    margin: 0.5rem 0;
+  }
+  &-name {
+    font-size: 14px;
+    font-weight: 500;
+  }
+  &-key {
+    font-size: 12px;
+  }
+  &-timer {
+    font-weight: 600;
+  }
+  &-card-label {
+    margin-top: 0.5rem;
+    font-size: 12px;
+  }
+  &-card {
+    font-weight: 500;
+    font-size: 14px;
+    color: $blue;
+    cursor: pointer;
+  }
+}
+
+.addBuddy {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: $fasticShadow;
+  border-radius: 15px;
+  margin: 0 1rem;
+  padding: 1rem;
+  min-width: 15%;
+  background-color: $gray_medium;
+  &-button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: $gray_light;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    font-size: 28px;
+    margin-bottom: 0.5rem;
+  }
+  &-label {
+    font-weight: 600;
+    font-size: 14px;
+  }
+}
+
+// <====== SECTION REALMS ======>
+.section-realms-progress {
+  display: flex;
+}
+
+.progressRealms {
+  background-color: white;
+  margin-left: 1rem;
+  width: 420px;
+  border: 1px solid $optimzeColor;
+  border-radius: 15px;
+  padding: 1rem;
+}
+.progressRealmItem {
+  padding-bottom: 2rem;
+  &:hover {
+    cursor: pointer;
+    .progressRealmItem-name {
+      color: $blue;
+    }
+  }
+  &-bar {
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  &-name {
+    font-size: 16px;
+    font-weight: 600;
+  }
+}
+
+@media (max-width: 940px) {
+  .section-welcome {
+    flex-direction: column;
+    margin-right: 1%;
+    margin-left: 1%;
+  }
+  .welcome-box {
+    width: 100%;
+    height: 150px;
+    margin: 0;
+    margin-top: 0.5rem;
+  }
+
+  .section-realms-progress {
+    flex-direction: column;
+    align-items: center;
+    margin-right: 1%;
+    margin-left: 1%;
+  }
+
+  .profile {
+    width: 100%;
+    margin: 0.5rem;
+    &-xpBar {
+      width: 90%;
+    }
+  }
+
+  .progressRealms {
+    width: 100%;
+    margin: 0;
+  }
+}

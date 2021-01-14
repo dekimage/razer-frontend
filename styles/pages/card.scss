@@ -1,0 +1,228 @@
+@import "../variables.scss";
+@import "../components.scss";
+.header {
+  margin-top: 2rem;
+}
+.card-container {
+  max-width: 1060px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  border-radius: 10px;
+  border: 1px solid $optimzeColor;
+  box-shadow: $optimzeShadow;
+  border-top: none;
+  margin-top: -4rem;
+  background-color: white;
+  padding-left: 6rem;
+  padding-right: 6rem;
+}
+.backgroundBlackScreen {
+  height: 10rem;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+}
+.backgroundSection {
+  z-index: 20;
+  height: 10rem;
+  display: flex;
+  justify-content: center;
+
+  &-backArrowContainer {
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    color: black;
+    display: flex;
+    border-radius: 50%;
+    padding: 0.5rem;
+    cursor: pointer;
+    &:hover {
+      background-color: $gray_light;
+    }
+  }
+}
+
+.cardImage {
+  border-radius: 50%;
+  height: 13rem;
+  width: 13rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.5rem;
+
+  &--img {
+    z-index: 100;
+    height: 13rem;
+  }
+}
+
+.basic-info-section {
+  padding-top: 7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.cardNameLogoContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // margin-right: 50px;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.cardName {
+  padding-right: 0.7rem;
+  padding-left: 0.7rem;
+  margin-top: 0.5rem;
+}
+
+.extraTags {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: black;
+}
+.xp-bar {
+  margin-top: 0.5rem;
+  border: 1px solid transparent;
+  border-radius: 1rem;
+  width: 15rem;
+  height: 0.3rem;
+  background-image: linear-gradient(to right, #a2db96, #24cca9);
+}
+.xp {
+  font-size: 0.8rem;
+}
+
+.video-section {
+  padding-top: 1rem;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 1rem;
+}
+
+.video-buttons {
+  width: 100%;
+  max-width: 840px;
+  padding-bottom: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.video {
+  border: 1px solid $optimzeColor;
+  border-radius: 0.5rem;
+  width: 100%;
+  max-width: 840px;
+  height: 20em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-dependencies {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  padding: 0.5rem;
+  border: 1px solid $optimzeColor;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    background-color: black;
+    color: white;
+    .ionIcon {
+      color: white;
+    }
+  }
+}
+
+.commandCenterBox {
+  padding-top: 0.5rem;
+  width: 100%;
+  max-width: 840px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.stats {
+  display: flex;
+  flex-direction: row;
+  margin: 0.5rem;
+  margin-top: 1rem;
+}
+
+.stats-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0.5rem 1rem 0.5rem 0;
+  margin-right: 1rem;
+  border-right: 1px solid $optimzeColor;
+  font-size: 0.8rem;
+
+  &:last-child {
+    border-right: none;
+    margin-right: 0;
+    padding-right: 0;
+  }
+
+  &--value {
+    font-size: 0.7rem;
+  }
+  &--label {
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: #888;
+  }
+}
+
+.showMore {
+  text-transform: uppercase;
+  color: #333;
+  border: 1px solid $optimzeColor;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-top: 0.5rem;
+  text-align: center;
+  cursor: pointer;
+}
+.related-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+@media (max-width: 480px) {
+  .stats-item {
+    padding-right: 0.5rem;
+    margin-right: 0.5rem;
+  }
+  .header {
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  .card-container {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}

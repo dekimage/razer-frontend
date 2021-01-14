@@ -1,0 +1,231 @@
+@import "../variables.scss";
+.checkout-layout {
+  display: flex;
+  justify-content: center;
+}
+.checkout {
+  display: flex;
+}
+
+.headline {
+  font-size: 1.7rem;
+  font-weight: 400;
+}
+
+.bundlesBox {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid $optimzeColor;
+  box-shadow: $optimzeShadow;
+  border-radius: 10px;
+  width: 100%;
+  padding: 1rem;
+  margin: 0.5rem;
+}
+.benefits-box {
+  display: flex;
+  flex-direction: row;
+}
+.benefits {
+  border: 1px solid $optimzeColor;
+  box-shadow: $optimzeShadow;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  &-discount-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    &-label {
+      margin-left: 1rem;
+      font-weight: 400;
+    }
+  }
+  &-expansion {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+  &-bonus {
+    text-align: left;
+    margin-left: 1rem;
+    color: #333;
+  }
+}
+
+.checkout-button {
+  background-color: green;
+}
+
+.basket {
+  padding: 1rem 0;
+  &-item {
+    display: flex;
+    flex-direction: row;
+    border-radius: 1rem;
+    border: 1px solid $optimzeColor;
+    box-shadow: $optimzeShadow;
+    padding: 1rem;
+    margin: 0.5rem;
+
+    &--name {
+      padding-left: 0.4rem;
+      font-size: 1.2rem;
+      font-weight: 400;
+    }
+
+    &--price {
+      font-size: 1.2rem;
+      font-weight: 400;
+      margin-left: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    &--trash {
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 0.5rem;
+      border: 1px solid $optimzeColor;
+      box-shadow: $optimzeShadow;
+      font-size: 1rem;
+      font-weight: 400;
+      background-color: white;
+    }
+  }
+}
+
+.catalog {
+  display: flex;
+  flex-direction: row;
+  padding: 1rem 0;
+
+  &-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 1rem;
+    border: 1px solid $optimzeColor;
+    box-shadow: $optimzeShadow;
+    margin: 0.5rem;
+    width: 9rem;
+
+    &--name {
+      align-self: center;
+      text-align: center;
+      width: 8rem;
+      margin-top: 0.5rem;
+      font-size: 1rem;
+      font-weight: 400;
+    }
+
+    &--body {
+      display: flex;
+      flex-direction: row;
+      margin: 0.5rem;
+    }
+
+    &--actions {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-left: auto;
+    }
+
+    &--info {
+      cursor: pointer;
+      text-align: center;
+      border-radius: 0.5rem;
+      border: 1px solid $optimzeColor;
+      box-shadow: $optimzeShadow;
+      font-size: 1rem;
+      font-weight: 400;
+      background-color: white;
+    }
+
+    &--price {
+      font-weight: 400;
+    }
+
+    &--image {
+      text-align: center;
+    }
+
+    &--button {
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 3rem;
+      width: 100%;
+      padding: 1rem 1rem;
+      color: white;
+      font-size: 1.2rem;
+      font-weight: 400;
+      background-image: linear-gradient(to right, #a2db96, #24cca9);
+      border-bottom: 3px solid #5aa085;
+      border-bottom-left-radius: 1rem;
+      border-bottom-right-radius: 1rem;
+    }
+  }
+}
+.summary {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin: 1rem 0;
+
+  &-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0.2rem 0;
+
+    &--discount {
+      border-radius: 1rem;
+      padding: 0 0.5rem;
+      color: white;
+    }
+
+    &--original {
+      text-decoration: line-through red;
+    }
+  }
+}
+.color-1 {
+  border: 2px solid $darkEggHeadRed;
+  background-color: $eggHeadRed;
+}
+.color-2 {
+  border: 2px solid $pokemonDarkGreen;
+  background-color: $normalGreen;
+}
+.color-3 {
+  border: 2px solid $darkEggHeadOrange;
+  background-color: $eggHeadOrange;
+}
+
+.checkout-button {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3rem;
+  width: 100%;
+  padding: 1rem 1rem;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 400;
+  background-image: linear-gradient(to right, #a2db96, #24cca9);
+  border-bottom: 3px solid #5aa085;
+  border-radius: 8px;
+  &-disabled {
+    background-image: linear-gradient(to right, #d8ddd7, #d8ddd7);
+    border-bottom: 3px solid #b6b9b5;
+    cursor: auto;
+  }
+}

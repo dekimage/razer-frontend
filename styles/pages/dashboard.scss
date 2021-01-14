@@ -1,0 +1,60 @@
+@import "../variables.scss";
+.section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.section-box {
+  width: 1080px;
+}
+
+.header-daily {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1rem 0.5rem;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.header-progresBar {
+  width: 250px;
+  &--label {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 14px;
+  }
+}
+
+.task {
+  cursor: pointer;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 25px;
+  box-shadow: $fasticShadow;
+  height: 120px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  &-image {
+    border-radius: 25px;
+    width: 70px;
+    height: 70px;
+    border: 1px solid black;
+    text-align: center;
+  }
+
+  &-name {
+    display: flex;
+    flex-grow: 1;
+    margin: 0 2rem;
+    align-items: center;
+    font-weight: 500;
+    font-size: 20px;
+  }
+}

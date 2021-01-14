@@ -1,0 +1,92 @@
+@import "../../styles/variables.scss";
+@import "../../styles/components.scss";
+
+.milestones {
+  background-color: white;
+  width: 80%;
+  margin: 0 1rem;
+  border: 1px solid $optimzeColor;
+  border-radius: 15px;
+  padding: 1rem;
+}
+
+.milestone {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  border: 1px solid $gray_light;
+  border-top: none;
+  height: 100px;
+  &:first-child {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-top: 1px solid $gray_light;
+  }
+  &:last-child {
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+  &-requirement {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    width: 30%;
+    border-right: 1px solid $gray_light;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  &-rewards {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 1rem;
+    width: auto;
+
+    &-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid $lingleeGray;
+      margin-right: 1rem;
+      height: 100%;
+    }
+  }
+  &-image {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border: 1px solid $gray_light;
+    height: 60px;
+    width: 60px;
+    left: 100%;
+    margin-left: -30px;
+    top: 20%;
+    padding: 0.5rem;
+    border-radius: 50%;
+    &.completed {
+      color: $normalGreen;
+      font-size: 30px;
+    }
+  }
+}
+
+@media (max-width: 940px) {
+  .milestones {
+    margin-top: 0.5rem;
+    width: 100%;
+  }
+  .milestone {
+    &-requirement {
+      padding: 0.5rem;
+    }
+    &-rewards {
+      padding: 0.5rem;
+      &-item {
+        margin-right: 0.2rem;
+      }
+    }
+  }
+}
