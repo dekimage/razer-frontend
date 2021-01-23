@@ -20,7 +20,7 @@ class Realm extends React.Component {
       data: { realms, loading, error },
       context: { realmsCardsCount, loggedIn },
     } = this.props;
-    console.log(realms);
+
     if (error) {
       return <div>Error Loading Realms...</div>;
     }

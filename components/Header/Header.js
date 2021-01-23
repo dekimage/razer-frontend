@@ -132,7 +132,7 @@ class Header extends React.Component {
                 <Link href="/" as="/">
                   <img
                     height="60px"
-                    src="http://localhost:1337/brawlhalla.png"
+                    // src="http://localhost:1337/brawlhalla.png"
                   />
                 </Link>
               </div>
@@ -195,7 +195,7 @@ class Header extends React.Component {
           </div>
           <Link href="/" as="/">
             <div className="desktop-header--item">
-              <img height="60px" src="http://localhost:1337/brawlhalla.png" />
+              {/* <img height="60px" src="http://localhost:1337/brawlhalla.png" /> */}
             </div>
           </Link>
 
